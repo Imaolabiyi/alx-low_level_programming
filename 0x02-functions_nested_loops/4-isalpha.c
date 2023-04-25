@@ -1,22 +1,22 @@
 #include "main.h"
 /**
- * print_sign - Entr point
- * @n: carrier variable
- * Description: prints the sign of a number
- * Return: 1 if n>0, 0 if n == 0, -1 if n<0
+ * _isalpha - Entry point
+ * @c: the integer value it receives
+ * Description: checks if alphabet
+ * Return: 1 if true. 0 if false
  */
-int print_sign(int n)
+int _isalpha(int c)
 {
-if (n > 0)
-{
-_putchar('+');
-return (1);
-}
-else if (n < 0)
-{
-_putchar('-');
-return (-1);
-}
-_putchar('0');
-return (0);
+	if (c >= 'a' && c <= 'z')
+	{
+	return (1);
+	}
+	else if (c >= 'A' && c <= 'Z')
+	{
+		return (1);
+	}
+	else
+	{
+		return (0);
+	}
 }
