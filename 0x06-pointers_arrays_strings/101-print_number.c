@@ -1,40 +1,20 @@
 #include "main.h"
-
 /**
- * string_toupper - Change all lowercase letters to uppercase
- * @c: string
- * Return: c
+ * print_number - Prints an integer.
+ * @n: The integer to be printed.
  */
-
-char *string_toupper(char *c)
+void print_number(int n)
 {
-	int i;
+	unsigned int num = n;
 
-	for (i = 0; c[i] != '\0'; i++)
+	if (n < 0)
 	{
-		if (c[i] > 96 && c[i] < 123)
-		{
-			c[i] -= 32;
-		}
+		_putchar('-');
+		num = -num;
 	}
-	return (c);
+
+	if ((num / 10) > 0)
+		print_number(num / 10);
+
+	_putchar((num % 10) + '0');
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
